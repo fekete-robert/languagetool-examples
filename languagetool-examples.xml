@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<category name="Linux Journal examples" type="style-guide">
+    <!-- Sample LanguageTool rules for the Linux Journal Author's Guide
+        http://www.linuxjournal.com/author/authguide -->
+
+    <rule id="LINUX_JOURNAL" name="Linux Journal">
+        <pattern>
+            <token>LinuxJournal</token>
+        </pattern>
+        <message>Did you mean Linux Journal?</message>
+        <example correction=''>This is the
+            <marker>LinuxJournal</marker>
+            magazine.</example>
+        <example>This is the Linux Journal magazine.</example>
+        <example correction=''>This is the Linuxjournal magazine.</example>
+    </rule>
+
+    <rule id="EG" name="e.g.">
+        <pattern>
+            <token>e</token>
+            <token>.</token>
+            <token>g</token>
+            <token>.</token>
+        </pattern>
+        <message>We don't use Latin abbreviations such as e.g. and i.e. Please use regular words.</message>
+        <example correction=''>
+            <marker>e.g.</marker>
+        </example>
+        <example>for example,</example>
+    </rule>
+
+    <rule id="IE" name="i.e.">
+        <pattern>
+            <token>e</token>
+            <token>.</token>
+            <token>g</token>
+            <token>.</token>
+        </pattern>
+        <message>We don't use Latin abbreviations such as e.g. and i.e. Please use regular words.</message>
+        <example correction=''>
+            <marker>i.e.</marker>
+        </example>
+        <example>that is,</example>
+    </rule>
+
+    <rule id="ETC" name="etc">
+        <pattern>
+            <token>etc</token>
+            <token>.</token>
+        </pattern>
+        <message>Don't use etc. to end a list of examples. Use "such as" and a comma.</message>
+        <example correction=''>
+            <marker>etc.</marker>
+        </example>
+        <example>such as,</example>
+    </rule>
+
+    <rule id="HTTP" name="HTTP-HTTPS">
+        <pattern>
+            <marker>
+                <token regexp='yes'>https?://.*</token>
+            </marker>
+        </pattern>
+        <message>Do not use links in the text. List them in a separate Resources section</message>
+        <short>Links in the body text</short>
+        <example correction=''>Visit the
+            <marker>http://www.example.com</marker>
+            website.</example>
+        <example correction=''>Visit the
+            <marker>https://www.example.com</marker>
+            website.</example>
+        <example>Visit the Example website.</example>
+    </rule>
+</category>
