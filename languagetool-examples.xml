@@ -31,9 +31,9 @@
 
     <rule id="IE" name="i.e.">
         <pattern>
-            <token>e</token>
+            <token>i</token>
             <token>.</token>
-            <token>g</token>
+            <token>e</token>
             <token>.</token>
         </pattern>
         <message>We don't use Latin abbreviations such as e.g. and i.e. Please use regular words.</message>
